@@ -44,11 +44,11 @@ export const WheaterApps = () => {
                 dataClima && (
                     <div class="card">
                         <img src={`https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`} alt="clima"/>
-                            <div class="cont">
+                            <div className="cont">
                                 <h3><b>{dataClima.name}</b></h3>
                                 <p><b>Condiciones meteorologicas:</b> {dataClima.weather[0].description}</p>
                                 <p><b>Temperatura:</b> {parseInt(dataClima.main.temp - difkelvin)}C - Max {parseInt(dataClima.main.temp_max - difkelvin)}C / Min {parseInt(dataClima.main.temp_min - difkelvin)}C</p>
-                                <p><b>Viento:</b> {dataClima.wind.speed} - Direccion: {dataClima.wind.grados} </p>
+                                <p><b>Viento:</b> {dataClima.wind.speed} - <b>Direccion:</b> {dataClima.wind.deg} </p>
                             </div>
                     </div>
                 )
